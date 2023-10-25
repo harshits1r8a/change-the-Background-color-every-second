@@ -12,7 +12,7 @@ const colorChange =  function(){
   document.body.style.backgroundColor = color
 }
 
-let myinterval = ''
+let myinterval
 
 start.addEventListener('click',(e) => {
   myinterval = setInterval(colorChange,1000)
@@ -21,5 +21,6 @@ start.addEventListener('click',(e) => {
 
 stop.addEventListener('click',(e) => { 
   clearInterval(myinterval)
+  myinterval = null
   console.log("stop")
 })
