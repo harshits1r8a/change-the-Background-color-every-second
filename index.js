@@ -15,7 +15,9 @@ const colorChange =  function(){
 let myinterval
 
 start.addEventListener('click',(e) => {
-  myinterval = setInterval(colorChange,1000)
+  if(!myinterval){
+    myinterval = setInterval(colorChange,1000)
+  }
   console.log("start")
 })
 
